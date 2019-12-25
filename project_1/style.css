@@ -1,32 +1,25 @@
-header {
-    background-image: url('./img/common/header.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 56px;
+body {
     width: 1000px;
     margin: 0 auto;
+}
+
+header {
+    height: 56px;
 }
 
 article {
     background-image: url('./img/common/page_bg.jpg');
     background-repeat: no-repeat;
     background-size: auto;
-    width: 1000px;
-    margin: 0 auto;
     display: flex;
-    position: relative;
 }
 
 .left-content {
     width: 60%;
 }
 
-.left-content img {
-    display: block;
-}
-
 .left-content--img__icon {
-    padding: 60px 0 20px 35px;
+    margin: 60px 0 20px 35px;
 }
 
 .left-content--img__content {
@@ -36,18 +29,22 @@ article {
 .right-content {
     width: 40%;
     padding: 20px;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.right-content:hover {
+    overflow-y: auto;
 }
 
 .right-content img {
-    width: 100%;
+    width: 384px;
 }
 
 footer {
     position: sticky;
-    width: 1000px;
     bottom: 0;
     left: 0;
-    margin: 0 auto;
     display: flex;
 }
 
