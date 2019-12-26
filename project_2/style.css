@@ -1,0 +1,134 @@
+body {
+    width: 960px;
+    margin: 0 auto;
+    font-family: Helvetica, sans-serif;
+}
+
+header {
+    height: 135px;
+    background-image: url('https://picsum.photos/960/135');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header .header-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+header span {
+    color: #ff0000;
+}
+
+header .breadcrumb {
+    font-size: 18px;
+    color: #FFF;
+}
+
+header .breadcrumb a {
+    transition: all 0.3s;
+}
+
+header .breadcrumb a:hover {
+    color: #0063f7;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #FFF;
+}
+
+.intro {
+    height: 408px;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    box-sizing: border-box;
+}
+
+.intro h1 {
+    margin-bottom: 44px;
+    padding-top: 100px;
+    margin-top: 0;
+}
+
+.intro p {
+    margin: 0px 155px 46px 115px;
+}
+
+.intro a {
+    background-color: #000;
+    display: inline-block;
+    padding: 14px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.intro a:hover {
+    background-color: #0063f7;
+}
+
+.project {
+    height: 408px;
+}
+
+.project h1 {
+    text-transform: capitalize;
+    padding-top: 55px;
+    margin-bottom: 45px;
+}
+
+.project .card {
+    width: 300px;
+}
+
+.project .project-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project .card-img {
+    height: 200px;
+}
+
+.project .card-content {
+    height: 80px;
+    width: 299;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-radius: 0 0 3px 3px;
+}
+
+.card-content p:nth-child(1) {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+.card-content p:nth-child(2) {
+    font-size: 15px;
+    color: #666;
+}
