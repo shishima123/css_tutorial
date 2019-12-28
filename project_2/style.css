@@ -3,6 +3,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 header,
@@ -109,11 +110,6 @@ main {
     margin-bottom: 45px;
 }
 
-.project .project-content {
-    display: flex;
-    justify-content: space-between;
-}
-
 .project-content .project--card {
     width: 300px;
     display: flex;
@@ -151,9 +147,10 @@ main {
 .info {
     height: 485px;
     background-color: #e5e5e5;
-    width: 100vw;
     display: flex;
     justify-content: center;
+    width: 100vw;
+    max-width: 100%;
 }
 
 .info .wrapper {

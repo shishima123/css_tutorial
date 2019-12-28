@@ -8,7 +8,13 @@
     <title>Project 2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./reset_css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 
 <body>
@@ -46,12 +52,54 @@
 
         <div class="project">
             <h1>my latest project</h1>
-            <div class="project-content">
+            <div class="project-content owl-carousel owl-theme">
                 <div class="project--card">
                     <div class="project--card-img">
                         <img src="https://picsum.photos/300/200" alt="">
                     </div>
                     <div class="project--card-body">
+                        <p>
+                            <a href="#">1WD.TV Project</a>
+                        </p>
+                        <p>
+                            Web design, Freelance
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project--card">
+                    <div class="project--card-img">
+                        <img src="https://picsum.photos/300/200" alt="">
+                    </div>
+                    <div class="project--card-body" width="300" height="80">
+                        <p>
+                            <a href="#">1WD.TV Project</a>
+                        </p>
+                        <p>
+                            Web design, Freelance
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project--card">
+                    <div class="project--card-img">
+                        <img src="https://picsum.photos/300/200" alt="">
+                    </div>
+                    <div class="project--card-body" width="300" height="80">
+                        <p>
+                            <a href="#">1WD.TV Project</a>
+                        </p>
+                        <p>
+                            Web design, Freelance
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project--card">
+                    <div class="project--card-img">
+                        <img src="https://picsum.photos/300/200" alt="">
+                    </div>
+                    <div class="project--card-body" width="300" height="80">
                         <p>
                             <a href="#">1WD.TV Project</a>
                         </p>
@@ -183,6 +231,19 @@
             </div>
         </div>
     </footer>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                rewind: true,
+                autoplay: true,
+                autoplayHoverPause: true,
+                nav: false
+            });
+        });
+    </script>
 </body>
 
 </html>
