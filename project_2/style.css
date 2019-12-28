@@ -1,7 +1,16 @@
 body {
-    width: 960px;
-    margin: 0 auto;
     font-family: Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header,
+main .intro,
+main .project,
+main .wrapper,
+footer {
+    width: 960px;
 }
 
 header {
@@ -34,28 +43,31 @@ header .logo {
     color: #FFF;
 }
 
-header span {
-    color: #ff0000;
-}
-
 header .breadcrumb {
     font-size: 18px;
     color: #FFF;
 }
 
-header .breadcrumb a {
+.breadcrumb a {
     transition: all 0.3s;
 }
 
-header .breadcrumb a:hover {
+.breadcrumb a:hover {
     color: #0063f7;
-    font-style: italic;
+    transform: skewX(-10deg);
+    display: inline-block;
 }
 
 a {
     text-decoration: none;
     text-transform: capitalize;
-    color: #FFF;
+    color: #000;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .intro {
@@ -88,7 +100,7 @@ a {
 }
 
 .project {
-    height: 408px;
+    height: 510px;
 }
 
 .project h1 {
@@ -97,20 +109,23 @@ a {
     margin-bottom: 45px;
 }
 
-.project .card {
-    width: 300px;
-}
-
 .project .project-content {
     display: flex;
     justify-content: space-between;
 }
 
-.project .card-img {
-    height: 200px;
+.project-content .project--card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
-.project .card-content {
+.project--card .project--card-img {
+    height: 200px;
+    width: 100%;
+}
+
+.project--card .project--card-body {
     height: 80px;
     width: 299;
     text-align: center;
@@ -120,7 +135,7 @@ a {
     border-radius: 0 0 3px 3px;
 }
 
-.card-content p:nth-child(1) {
+.project--card-body p:nth-child(1) {
     font-weight: bold;
     font-size: 18px;
     margin-top: 0;
@@ -128,7 +143,128 @@ a {
     padding-top: 20px;
 }
 
-.card-content p:nth-child(2) {
+.project--card-body p:nth-child(2) {
     font-size: 15px;
     color: #666;
+}
+
+.info {
+    height: 485px;
+    background-color: #e5e5e5;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.info .wrapper {
+    display: flex;
+}
+
+.info .left-content {
+    width: 510px;
+    padding-right: 50px;
+}
+
+.info .right-content {
+    width: 450px;
+}
+
+.info h1 {
+    text-transform: capitalize;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+
+.info .left-content p {
+    font-size: 15px;
+}
+
+.info .left-content p:nth-child(3) {
+    margin-bottom: 50px;
+}
+
+.social span {
+    display: inline-block;
+    border: 2px solid #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.social span:hover {
+    background-color: rgba(0, 153, 255, 0.733);
+}
+
+.social span i {
+    font-size: 20px;
+}
+
+.social span i {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info--card {
+    display: flex;
+    margin: 30px 0px;
+}
+
+.info--card .info-card-img {
+    margin-right: 20px;
+}
+
+.info--card img {
+    width: 150px;
+    height: 100px;
+}
+
+.info--card p:nth-child(1) {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info--card p span {
+    font-size: 13px;
+    color: red;
+}
+
+.info--card p span:nth-child(2) {
+    color: #a0a0a0;
+}
+
+footer {
+    height: 280px;
+}
+
+footer .footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer-content p {
+    margin: 0px;
+}
+
+.text-white {
+    color: #FFF;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-red {
+    color: red;
 }
