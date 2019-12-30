@@ -1,61 +1,255 @@
 body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Lato, Calibri, Arial, sans-serif;
+}
+
+ul {
+    padding: 20px 20px 100px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .wrapper {
     width: 400px;
     position: relative;
     height: 300px;
-    margin-right: 20px;
+    margin: 0;
 }
 
-.img-top {
-    position: relative;
-    display: block;
-    z-index: 1000;
-}
-
-.wrapper .img-top {
-    transition: transform 0.4s;
-}
-
-.wrapper:hover .img-top {
-    transform: translateY(-90px);
-}
-
-.caption {
-    background-color: #2c3f52;
-    padding: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.wrapper img {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    display: block;
+    z-index: 1;
 }
 
-.caption .topic {
+.wrapper .caption-left h3 {
     color: #FFF;
     margin: 0;
 }
 
-.caption .writer {
+.wrapper .caption-left span {
     color: #ED4E6E;
     font-size: 15px;
 }
 
-.btn {
+.wrapper a {
     text-decoration: none;
     color: #FFF;
     background-color: #ED4E6E;
     padding: 5px 10px;
+    display: inline-block;
+    transition: all 0.3s;
 }
 
-.btn:hover {
+.wrapper a:hover {
     background-color: #e8395c;
 }
+
+.caption {
+    background-color: #2c3f52;
+    position: absolute;
+}
+
+/* start effect 1 */
+.effect-1 .caption-1 {
+    transition: all 0.4s;
+}
+
+.effect-1:hover .caption-1 {
+    opacity: 1;
+    transform: translate(20px, 20px);
+}
+
+.caption-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+}
+
+.caption-1 .caption-left {
+    margin-bottom: 30px;
+}
+
+/* end effect 1 */
+
+/* start effect 2 */
+.effect-2 img {
+    transition: transform 0.4s;
+}
+
+.effect-2:hover img {
+    transform: translateY(-90px);
+}
+
+.caption-2 {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+/* end effect 2 */
+
+/* start effect 3 */
+.effect-3 {
+    overflow: hidden;
+}
+
+.effect-3 img {
+    transition: all 0.4s;
+}
+
+.effect-3:hover img {
+    transform: translateY(-45px);
+}
+
+.effect-3:hover .caption-3 {
+    transform: translateY(-90px);
+}
+
+.caption-3 {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: -90px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    z-index: 3;
+    transition: all 0.4s;
+}
+
+/* end effect 3 */
+
+/* start effect 4*/
+
+.effect-4 img {
+    transition: all 0.4s;
+    z-index: 3;
+}
+
+.effect-4:hover img {
+    transform: scale(0.4, 0.4);
+}
+
+.effect-4:hover .caption-4 {
+    transform: scale(1, 1);
+}
+
+.caption-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    transform: scale(0.7);
+}
+
+.caption-4 div {
+    padding: 20px;
+}
+
+.caption-4 .caption-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* end effect 4 */
+
+/* start effect 5*/
+
+.effect-5 img {
+    transition: all 0.4s;
+    z-index: 3;
+}
+
+.effect-5:hover img {
+    transform: translateY(-50px) scale(0.5, 0.5);
+}
+
+.caption-5 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.caption-5 div {
+    padding: 20px;
+}
+
+.caption-5 .caption-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.caption-5 .caption-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* end effect 5*/
+
+/* start effect 6*/
+
+.effect-6:hover .caption-6 {
+    pointer-events: auto;
+    opacity: 1;
+    height: 130%;
+    box-shadow: 0 0 0 10px #2c3f52;
+}
+
+.caption-6 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    box-shadow: 0 0 0 0px #2c3f52;
+}
+
+.caption-6 div {
+    padding: 20px;
+}
+
+.caption-6 .caption-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.caption-6 .caption-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* end effect 6*/
