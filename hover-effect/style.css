@@ -15,6 +15,7 @@ li {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    vertical-align: top;
 }
 
 .wrapper {
@@ -22,6 +23,7 @@ li {
     position: relative;
     height: 300px;
     margin: 0;
+    text-align: start;
 }
 
 .wrapper img {
@@ -125,7 +127,7 @@ li {
 }
 
 .effect-3:hover .caption-3 {
-    transform: translateY(-90px);
+    transform: translateY(-92px);
 }
 
 .caption-3 {
@@ -133,7 +135,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: -90px;
+    bottom: -92px;
     left: 0;
     right: 0;
     box-sizing: border-box;
