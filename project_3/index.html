@@ -7,15 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project 3</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./reset_css.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
@@ -154,30 +149,55 @@
             </div>
         </article>
 
-        <section class="carousel single-item">
-            <div class="comment">
-                <h1 class=" text-uppercase">
-                    What Students Says About Our University
-                </h1>
-                <p>
-                    We guide our students to find their own academic paths by helping them to reason, analyze and
-                    understand in
-                    unprecedented ways. The undergraduate experience at Duke is characterized by a spirit of
-                    academic
-                    energy, exploration
-                    and challenge.
-                </p>
-                <p class="text-uppercase">
-                    — Amanda Persch
-                </p>
-                <img src="./img/img-4.png" alt="">
-            </div>
-            <div class="registration">
+        <section class="comment">
+            <div class="comment-wrapper">
+                <div class="comment-header">
+                    <h1 class="text-uppercase">
+                        What Students Says About Our University
+                    </h1>
+                    <div class="arrow">
+                        <button class="slick-prev"><i class="fas fa-angle-left"></i></button>
+                        <button class="slick-next"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="fade">
+                        <div class="carousel-item">
+                            <p>
+                                We guide our students to find their own academic paths by helping them to reason,
+                                analyze
+                                and
+                                understand in
+                                unprecedented ways. The undergraduate experience at Duke is characterized by a spirit of
+                                academic
+                                energy, exploration
+                                and challenge.
+                            </p>
+                            <p class="text-uppercase">
+                                — Amanda Persch
+                            </p>
+                            <img src="./img/img-4.png" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <p>
+                                I’m selfish, impatient and a little insecure. I make mistakes, I am out of control and
+                                at times hard to handle. But if you can’t handle me at my worst, then you sure as hell
+                                don’t deserve me at my best.
+                            </p>
+                            <p class="text-uppercase">
+                                ― Marilyn Monroe
+                            </p>
+                            <img src="./img/img-5.png" alt="">
+                        </div>
+                    </div>
+                </div>
                 <div class="registration-wrapper">
                     <a href="#" class="text-uppercase">
                         Click Here Now to Get Started <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
+            <div class="registration"></div>
         </section>
         <footer>
             <div class="footer-wrapper">
@@ -218,7 +238,26 @@
             </div>
         </footer>
         <script>
-            $('.single-item').slick();
+            $(document).ready(function () {
+                $('.fade').slick({
+                    dots: false,
+                    infinite: true,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear',
+                    autoplay: true,
+                    arrows: false,
+                    autoplaySpeed: 5000
+                });
+
+                $('.slick-prev').click(function () {
+                    $('.fade').slick('slickPrev');
+                })
+
+                $('.slick-next').click(function () {
+                    $('.fade').slick('slickNext');
+                })
+            })
         </script>
     </main>
 </body>

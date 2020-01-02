@@ -27,8 +27,8 @@ header .header-top,
 section .intro-banner,
 section .about-wrapper,
 article,
-section .comment,
-.registration-wrapper,
+section .carousel-item,
+section .comment-wrapper,
 footer .footer-wrapper {
     width: 990px;
     height: 100%;
@@ -85,7 +85,7 @@ footer .footer-wrapper {
 }
 
 .connect span:nth-child(1) {
-    cursor: context-menu;
+    user-select: none;
 }
 
 .intro {
@@ -271,44 +271,78 @@ footer .footer-wrapper {
     background-color: #3498db;
 }
 
-.carousel {
+.comment {
     position: relative;
     height: 450px;
 }
 
-.comment {
-    height: 100%;
+.comment-wrapper {
     position: relative;
 }
 
-.comment h1 {
+.comment-header {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    ;
+}
+
+.comment-header h1 {
     font-size: 25px;
     color: #3498db;
     font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 65px;
-    padding-top: 40px;
+    margin: 0;
 }
 
-.comment p {
+.arrow button {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgb(119, 119, 119);
+    color: rgb(119, 119, 119);
+    outline: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.carousel-item {
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 135px;
+}
+
+.carousel-item p {
     width: 730px;
 }
 
-.comment p:nth-of-type(1) {
+.carousel-item p:nth-of-type(1) {
     font-size: 13px;
 }
 
-.comment p:nth-of-type(2) {
+.carousel-item p:nth-of-type(2) {
     font-size: 13px;
     text-align: end;
     font-weight: 600;
 }
 
-.comment img {
+.carousel-item img {
     position: absolute;
     right: 30px;
     bottom: 0;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .registration {
@@ -321,7 +355,11 @@ footer .footer-wrapper {
 }
 
 .registration-wrapper {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
 }
 
 .registration-wrapper a {
@@ -397,4 +435,11 @@ footer {
 
 .copyright {
     font-size: 13px;
+}
+
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slider {
+    height: 100%;
 }
