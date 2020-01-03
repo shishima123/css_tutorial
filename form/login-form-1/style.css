@@ -19,7 +19,8 @@ form h1 {
     user-select: none;
     font-weight: 500;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-top: 15px;
     font-size: 2.3rem;
 }
 
@@ -28,6 +29,7 @@ form input {
     border-bottom: 2px solid dodgerblue;
     padding: 5px;
     outline: none;
+    display: block;
 }
 
 .input-group {
@@ -38,6 +40,40 @@ form input {
 .input-group label {
     position: absolute;
     left: 0;
-    bottom: 15px;
-    user-select: none;
+    bottom: 5px;
+    pointer-events: none;
+    color: gray;
+    transition: all 0.4s;
+}
+
+input:focus+label,
+input:valid+label {
+    transform: translate(-3px, -23px);
+    font-size: 14px;
+    color: dodgerblue;
+}
+
+button[type=submit] {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(137, 247, 254, 1) 0%, rgba(102, 166, 255, 1) 90%);
+    color: #FFF;
+    width: 100%;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    transition: all 0.2s;
+}
+
+button[type=submit]:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+form p {
+    color: gray;
+}
+
+form a {
+    color: #000;
 }
